@@ -145,12 +145,18 @@ const deleteUser = (req, res) => {
 };
 
 // Projects Route
-app.route('/api/v1/projects').get(getAllProjects).post(createProject);
-app.route('/api/v1/projects/:id').get(getProject).patch(updateProject).delete(deleteProject);
+const projectRouter = express.Router();
+projectRouter.route('/').get(getAllProjects).post(createProject);
+projectRouter.route('/:id').get(getProject).patch(updateProject).delete(deleteProject);
 
 // Users Route
-app.route('/api/v1/users').get(getAllUsers).post(createUser);
-app.route('/api/v1/users/:id').get(getUser).patch(updateUser).delete(deleteUser);
+const userRouter = express.Router();
+userRouter.route('/').get(getAllUsers).post(createUser);
+userRouter.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
+
+// Mounting the router, mounting a new router to a route basically
+app.use('/api/v1/projects', projectRouter);
+app.use('/api/v1/users', userRouter);
 
 const port = 3000;
 app.listen(port, () => {
