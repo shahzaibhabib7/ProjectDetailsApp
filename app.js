@@ -28,7 +28,9 @@ app.use(express.static(`${__dirname}/public`));
 //     next();
 // });
 
-app.use(morgan('dev'));
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'));
+}
 
 // Mounting the router, mounting a new router to a route basically
 app.use('/api/v1/projects', projectRouter);
