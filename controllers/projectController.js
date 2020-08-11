@@ -3,6 +3,18 @@ const fs = require('fs');
 
 const projects = JSON.parse(fs.readFileSync(`${__dirname}/../dev-data/data/project-simple.json`));
 
+exports.checkId = (req, res, next, val) => {
+    console.log(`Project id is ${val}`);
+
+    if (req.params.id > projects.length) {
+        return res.status(404).json({
+            status: 'fail',
+            message: 'Invalid ID'
+        });
+    }
+    next();
+};
+
 exports.getAllProjects = (req, res) => {
     res.status(200).json({
         status: 'success',
@@ -18,13 +30,6 @@ exports.getProject = (req, res) => {
 
     const id = req.params.id * 1;
     const project = projects.find(el => el.id === id);
-
-    if (!project) {
-        return res.status(404).json({
-            status: 'fail',
-            message: 'Invalid ID'
-        });
-    }
 
     res.status(200).json({
         status: 'success',
@@ -53,13 +58,6 @@ exports.createProject = (req, res) => {
 };
 
 exports.updateProject = (req, res) => {
-    if (req.params.id * 1 > projects.length) {
-        return res.status(404).json({
-            status: 'fail',
-            message: 'Invalid ID'
-        });
-    }
-
     res.status(200).json({
         status: 'success',
         data: {
@@ -69,13 +67,6 @@ exports.updateProject = (req, res) => {
 };
 
 exports.deleteProject = (req, res) => {
-    if (req.params.id * 1 > projects.length) {
-        return res.status(404).json({
-            status: 'fail',
-            message: 'Invalid ID'
-        });
-    }
-
     const deletedProject = projects.splice(req.params.id, 1);
     console.log(deletedProject);
 
