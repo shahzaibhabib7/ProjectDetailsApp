@@ -12,7 +12,7 @@ app.use(express.json());
 
 const projects = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/project-simple.json`));
 
-app.get('/api/v1/projects', (req, res) => {
+const getAllProjects = (req, res) => {
     res.status(200).json({
         status: 'success',
         results: projects.length,
@@ -20,9 +20,9 @@ app.get('/api/v1/projects', (req, res) => {
             projects
         }
     });
-});
+};
 
-app.get('/api/v1/projects/:id', (req, res) => {
+const getProject = (req, res) => {
     // console.log(req.params);
 
     const id = req.params.id * 1;
@@ -41,9 +41,9 @@ app.get('/api/v1/projects/:id', (req, res) => {
             project
         }
     });
-});
+};
 
-app.post('/api/v1/projects', (req, res) => {
+const createProject = (req, res) => {
     const newId = projects[projects.length - 1].id + 1;
     // console.log(newId);
 
@@ -59,9 +59,9 @@ app.post('/api/v1/projects', (req, res) => {
             }
         });
     });
-});
+};
 
-app.patch('/api/v1/projects/:id', (req, res) => {
+const updateProject = (req, res) => {
     if (req.params.id * 1 > projects.length) {
         return res.status(404).json({
             status: 'fail',
@@ -75,9 +75,9 @@ app.patch('/api/v1/projects/:id', (req, res) => {
             tours: '<Updated project here...>'
         }
     });
-});
+};
 
-app.delete('/api/v1/projects/:id', (req, res) => {
+const deleteProject = (req, res) => {
     if (req.params.id * 1 > projects.length) {
         return res.status(404).json({
             status: 'fail',
@@ -92,7 +92,13 @@ app.delete('/api/v1/projects/:id', (req, res) => {
         status: 'success',
         data: null
     });
-});
+};
+
+app.get('/api/v1/projects', getAllProjects);
+app.get('/api/v1/projects/:id', getProject);
+app.post('/api/v1/projects', createProject);
+app.patch('/api/v1/projects/:id', updateProject);
+app.delete('/api/v1/projects/:id', deleteProject);
 
 const port = 3000;
 app.listen(port, () => {
