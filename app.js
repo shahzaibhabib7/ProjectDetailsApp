@@ -14,6 +14,9 @@ const app = express();
 // data from the body is added to the 'req' object
 app.use(express.json());
 
+// serving static files
+app.use(express.static(`${__dirname}/public`));
+
 // our own middleware 
 // app.use((req, res, next) => {
 //     console.log('Hello, from the middleware');
