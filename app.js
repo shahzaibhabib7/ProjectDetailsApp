@@ -109,8 +109,48 @@ const deleteProject = (req, res) => {
     });
 };
 
+const getAllUsers = (req, res) => {
+    res.status(500).json({
+        status: 'error',
+        message: 'Functionality for this route is not yet implemented'
+    });
+};
+
+const getUser = (req, res) => {
+    res.status(500).json({
+        status: 'error',
+        message: 'Functionality for this route is not yet implemented'
+    });
+};
+
+const createUser = (req, res) => {
+    res.status(500).json({
+        status: 'error',
+        message: 'Functionality for this route is not yet implemented'
+    });
+};
+
+const updateUser = (req, res) => {
+    res.status(500).json({
+        status: 'error',
+        message: 'Functionality for this route is not yet implemented'
+    });
+};
+
+const deleteUser = (req, res) => {
+    res.status(500).json({
+        status: 'error',
+        message: 'Functionality for this route is not yet implemented'
+    });
+};
+
+// Projects Route
 app.route('/api/v1/projects').get(getAllProjects).post(createProject);
 app.route('/api/v1/projects/:id').get(getProject).patch(updateProject).delete(deleteProject);
+
+// Users Route
+app.route('/api/v1/users').get(getAllUsers).post(createUser);
+app.route('/api/v1/users/:id').get(getUser).patch(updateUser).delete(deleteUser);
 
 const port = 3000;
 app.listen(port, () => {
