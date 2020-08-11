@@ -94,11 +94,8 @@ const deleteProject = (req, res) => {
     });
 };
 
-app.get('/api/v1/projects', getAllProjects);
-app.get('/api/v1/projects/:id', getProject);
-app.post('/api/v1/projects', createProject);
-app.patch('/api/v1/projects/:id', updateProject);
-app.delete('/api/v1/projects/:id', deleteProject);
+app.route('/api/v1/projects').get(getAllProjects).post(createProject);
+app.route('/api/v1/projects/:id').get(getProject).patch(updateProject).delete(deleteProject);
 
 const port = 3000;
 app.listen(port, () => {
