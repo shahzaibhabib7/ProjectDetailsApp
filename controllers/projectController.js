@@ -15,6 +15,15 @@ exports.checkId = (req, res, next, val) => {
     next();
 };
 
+exports.checkBody = (req, res, next) => {
+    if (!req.body.projectName || !req.body.projectSource || !req.body.clientName || !req.body.developer || !req.body.projectManager || !req.body.startingDate || !req.body.dueDate || !req.body.platform || !req.body.theme || !req.body.plugin || !req.body.status) {
+        return res.status(400).json({
+            status: 'fail',
+            message: 'Incomplete data'
+        });
+    }
+};
+
 exports.getAllProjects = (req, res) => {
     res.status(200).json({
         status: 'success',
