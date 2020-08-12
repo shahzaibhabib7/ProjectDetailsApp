@@ -1,6 +1,5 @@
 [
     {
-        "id": 0,
         "projectName": "Anima Garden",
         "projectSource": "fiverr",
         "clientName": "Andre Heller",
@@ -9,8 +8,8 @@
             "Hasnain Raza"
         ],
         "projectManager": "Muhammad Kazim",
-        "startingDate": "2020-03-12T12:00:00+00:00",
-        "dueDate": "2020-03-25T12:00:00+00:00",
+        "startingDate": "2020-03-19T09:00:00.000Z",
+        "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "sunway",
         "plugins": [
@@ -20,7 +19,6 @@
         "status": "Complete"
     },
     {
-        "id": 1,
         "projectName": "RBLUXCars Ltd.",
         "projectSource": "Upwork",
         "clientName": "John Smith",
@@ -28,8 +26,8 @@
             "Shahzaib Habib Ansari"
         ],
         "projectManager": "Kazim Raza",
-        "startingDate": "2020-04-01T12:00:00+00:00",
-        "dueDate": "2020-04-07T12:00:00+00:00",
+        "startingDate": "2020-03-19T09:00:00.000Z",
+        "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Be Theme",
         "plugins": [
@@ -38,7 +36,6 @@
         "status": "Complete"
     },
     {
-        "id": 2,
         "projectName": "Fastrefill4you",
         "projectSource": "Fiverr",
         "clientName": "Alan Border",
@@ -48,8 +45,8 @@
             "Ali Hadi"
         ],
         "projectManager": "Faheem Abbas",
-        "startingDate": "2020-04-15T12:00:00+00:00",
-        "dueDate": "2020-04-07T25:00:00+00:00",
+        "startingDate": "2020-03-19T09:00:00.000Z",
+        "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Divi Theme",
         "plugins": [
@@ -60,7 +57,6 @@
         "status": "Complete"
     },
     {
-        "id": 3,
         "projectName": "Commercial Cleaning Business Box",
         "projectSource": "Fiverr",
         "clientName": "Amanda Davis",
@@ -68,8 +64,8 @@
             "Shahzaib Habib Ansari"
         ],
         "projectManager": "Faheem Abbas",
-        "startingDate": "2020-04-15T12:00:00+00:00",
-        "dueDate": "2020-04-07T25:00:00+00:00",
+        "startingDate": "2020-03-19T09:00:00.000Z",
+        "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Divi Theme",
         "plugins": [
@@ -78,7 +74,6 @@
         "status": "Complete"
     },
     {
-        "id": 4,
         "projectName": "Abbas Automation",
         "projectSource": "3rd Party",
         "clientName": "Abbas Khan",
@@ -88,8 +83,8 @@
             "Hasnain Raza"
         ],
         "projectManager": "Faheem Abbas",
-        "startingDate": "2020-04-15T12:00:00+00:00",
-        "dueDate": "2020-04-07T25:00:00+00:00",
+        "startingDate": "2020-03-19T09:00:00.000Z",
+        "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Divi Theme",
         "plugins": [
@@ -99,7 +94,6 @@
         "status": "Complete"
     },
     {
-        "id": 5,
         "projectName": "Zookdisk",
         "projectSource": "fiverr",
         "clientName": "Paul",
@@ -109,30 +103,8 @@
             "Majid Ali"
         ],
         "projectManager": "Muhammad Kazim",
-        "startingDate": "2020-03-12T12:00:00+00:00",
-        "dueDate": "2020-03-25T12:00:00+00:00",
-        "platform": "Wordpress",
-        "theme": "example",
-        "plugins": [
-            "Classic Editor",
-            "Woocommerce",
-            "Paypal"
-        ],
-        "status": "Complete"
-    },
-    {
-        "id": 6,
-        "projectName": "Zookdisk",
-        "projectSource": "fiverr",
-        "clientName": "Paul",
-        "developer": [
-            "Uzair Haider",
-            "Hasnain Raza",
-            "Majid Ali"
-        ],
-        "projectManager": "Muhammad Kazim",
-        "startingDate": "2020-03-12T12:00:00+00:00",
-        "dueDate": "2020-03-25T12:00:00+00:00",
+        "startingDate": "2020-03-19T09:00:00.000Z",
+        "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "example",
         "plugins": [
