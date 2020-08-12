@@ -2,91 +2,97 @@ const Project = require('./../models/projectModel');
 
 
 
-// exports.checkId = (req, res, next, val) => {
-//     console.log(`Project id is ${val}`);
+exports.getAllProjects = async (req, res) => {
+    try {
+        const projects = await Project.find();
 
-//     if (req.params.id > projects.length) {
-//         return res.status(404).json({
-//             status: 'fail',
-//             message: 'Invalid ID'
-//         });
-//     }
-//     next();
-// };
-
-exports.checkBody = (req, res, next) => {
-    if (!req.body.projectName || !req.body.projectSource || !req.body.clientName || !req.body.developer || !req.body.projectManager || !req.body.startingDate || !req.body.dueDate || !req.body.platform || !req.body.theme || !req.body.plugin || !req.body.status) {
-        return res.status(400).json({
+        res.status(200).json({
+            status: 'success',
+            results: projects.length,
+            data: {
+                projects
+            }
+        });
+    } catch (err) {
+        res.status(404).json({
             status: 'fail',
-            message: 'Incomplete data'
+            message: err
         });
     }
 };
 
-exports.getAllProjects = (req, res) => {
-    res.status(200).json({
-        status: 'success',
-        // results: projects.length,
-        // data: {
-        //     projects
-        // }
-    });
+exports.getProject = async (req, res) => {
+    try {
+        const project = await Project.findById(req.params.id);
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                project
+            }
+        });
+    } catch (err) {
+        res.status(404).json({
+            status: 'fail',
+            message: err
+        });
+    }
 };
 
-exports.getProject = (req, res) => {
-    // console.log(req.params);
+exports.createProject = async (req, res) => {
+    try {
+        const newProject = await Project.create(req.body);
 
-    const id = req.params.id * 1;
-    // const project = projects.find(el => el.id === id);
-
-    // res.status(200).json({
-    //     status: 'success',
-    //     data: {
-    //         project
-    //     }
-    // });
+        res.status(201).json({
+            status: 'success',
+            data: {
+                project: newProject
+            }
+        });
+    } catch (err) {
+        res.status(404).json({
+            status: 'fail',
+            message: err
+        });
+    }
 };
 
-exports.createProject = (req, res) => {
-    // const newId = projects[projects.length - 1].id + 1;
-    // // console.log(newId);
+exports.updateProject = async (req, res) => {
+    try {
+        const updatedProject = await Project.findByIdAndUpdate(req.params.id, req.body, {
+            // the 'new' updated document is the one that will be returned
+            new: true,
+            // so that each time that we update a certain document then the validators that
+            // we specified in the schema will run again.
+            runValidators: true
+        });
 
-    // const newProject = Object.assign({ id: newId }, req.body);
-    // // console.log(newProject);
-    // projects.push(newProject);
-
-    // fs.writeFile(`${__dirname}/dev-data/data/project-simple.json`, JSON.stringify(projects), err => {
-    //     res.status(201).json({
-    //         status: 'success',
-    //         data: {
-    //             project: newProject
-    //         }
-    //     });
-    // });
-
-    res.status(201).json({
-        status: 'success',
-        // data: {
-        //     project: newProject;
-        // }
-    });
+        res.status(200).json({
+            status: 'success',
+            data: {
+                updatedProject
+            }
+        });
+    } catch (err) {
+        res.status(404).json({
+            status: 'fail',
+            message: err
+        });
+    }
 };
 
-exports.updateProject = (req, res) => {
-    res.status(200).json({
-        status: 'success',
-        data: {
-            tours: '<Updated project here...>'
-        }
-    });
-};
+exports.deleteProject = async (req, res) => {
+    try {
+        await Project.findByIdAndDelete(req.params.id);
 
-exports.deleteProject = (req, res) => {
-    const deletedProject = projects.splice(req.params.id, 1);
-    console.log(deletedProject);
-
-    res.status(204).json({
-        status: 'success',
-        data: null
-    });
+        res.status(404).json({
+            status: 'success',
+            data: null
+        });
+    } catch (err) {
+        res.status(404).json({
+            status: 'fail',
+            message: err
+        });
+    }
 };

@@ -4,7 +4,8 @@ const projectSchema = new mongoose.Schema({
     projectName: {
         type: String,
         required: [true, 'A project must have a name'],
-        unique: true
+        unique: true,
+        trim: true
     },
     projectSource: {
         type: String,
