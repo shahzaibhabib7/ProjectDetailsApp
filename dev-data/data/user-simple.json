@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Shahzaib Habib",
+        "userName": "shahzaibhabib",
+        "email": "shahzaibhabib@example.com",
+        "role": "developer"
+    },
+    {
+        "name": "Muhammad Karrar",
+        "userName": "muhammadkarrar",
+        "email": "karrar@example.com",
+        "role": "developer"
+    },
+    {
+        "name": "Majid Ali",
+        "userName": "majidali",
+        "email": "majidali@example.com",
+        "role": "developer"
+    },
+    {
+        "name": "Hasnain Raza",
+        "userName": "hasnainraza",
+        "email": "hasnainraza@example.com",
+        "role": "developer"
+    },
+    {
+        "name": "Uzair Haider",
+        "userName": "uzairhaider",
+        "email": "uzairhaider@example.com",
+        "role": "developer"
+    },
+    {
+        "name": "Ali Hadi",
+        "userName": "alihadi",
+        "email": "alihadi@example.com",
+        "role": "developer"
+    },
+    {
+        "name": "Faheem Abbas",
+        "userName": "faheemabbas",
+        "email": "faheemabbas@example.com",
+        "role": "project manager"
+    },
+    {
+        "name": "Kazim Raza",
+        "userName": "kazimraza",
+        "email": "kazimraza@example.com",
+        "role": "administrator"
+    }
+]
