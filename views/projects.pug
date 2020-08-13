@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title ProjectDetailsApp | #{title}
+        link(rel="stylesheet" href="css/styles.css")
+        link(rel="shortcut icon" type='imgage/png'  href="img/favicon.png")
+
+    body
+        main.main
+            .card_container
+                each project in projects
+                    .card
+                        .details
+                            h1= project.projectName
+                            h3= project.projectSource
+                            h3= project.clientName
+                            h3= project.startingDate
+                            h4= project.dueDate
+
+                        .technical_details
+                            p= project.developer
+                            p= project.projectManager
+                            p= project.platform
+                            p= project.theme
+                            p= project.plugins
+                            p= project.status

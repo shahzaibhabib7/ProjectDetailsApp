@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title ProjectDetailsApp | #{title}
+        link(rel="stylesheet" href="css/styles.css")
+        link(rel="shortcut icon" type='imgage/png'  href="img/favicon.png")
+
+    body
+        main.main
+            .card_container
+                each user in users
+                    .card
+                        h2= user.name
+                        h4= user.userName
+                        h4= user.email
+                        p= user.role
