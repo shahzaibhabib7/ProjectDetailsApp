@@ -6,6 +6,7 @@ const morgan = require('morgan');
 // own modules
 const projectRouter = require('./routes/projectRoutes');
 const userRouter = require('./routes/userRoutes');
+const { fail } = require('assert');
 
 
 const app = express();
@@ -35,5 +36,13 @@ if (process.env.NODE_ENV === 'development') {
 // Mounting the router, mounting a new router to a route basically
 app.use('/api/v1/projects', projectRouter);
 app.use('/api/v1/users', userRouter);
+
+// ROUTE HANDLER for handling unhandeled routes
+app.use('*', (req, res) => {
+    res.status(404).json({
+        status: 'fail',
+        message: `Can't find ${req.originalUrl} on this server!`
+    });
+});
 
 module.exports = app;
