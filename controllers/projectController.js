@@ -1,5 +1,6 @@
 const Project = require('./../models/projectModel');
 const catchAsync = require('./../utils/catchAsync');
+const appError = require('./../utils/appError');
 
 
 
@@ -19,6 +20,10 @@ exports.getAllProjects = catchAsync(async (req, res, next) => {
 exports.getProject = catchAsync(async (req, res, next) => {
 
     const project = await Project.findById(req.params.id);
+
+    if (!project) {
+        return next(new appError('No project found with that ID', 404));
+    }
 
     res.status(200).json({
         status: 'success',

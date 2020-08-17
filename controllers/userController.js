@@ -1,5 +1,6 @@
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
+const appError = require('./../utils/appError');
 
 
 exports.getAllUsers = catchAsync(async (req, res, next) => {
@@ -18,6 +19,10 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
 exports.getUser = catchAsync(async (req, res, next) => {
 
     const user = await User.findById(req.params.id);
+
+    if (!user) {
+        return next(new appError('No user found with that ID', 404));
+    }
 
     res.status(200).json({
         status: 'success',
