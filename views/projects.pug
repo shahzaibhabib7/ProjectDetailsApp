@@ -1,26 +1,52 @@
 doctype html
 html
     head
-        title ProjectDetailsApp | #{title}
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet" href="css/styles.css")
         link(rel="shortcut icon" type='imgage/png'  href="img/favicon.png")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap")
+        title ProjectDetailsApp | #{title}
+        
 
     body
         main.main
-            .card_container
+            .cards_container
                 each project in projects
                     .card
                         .details
                             h1= project.projectName
-                            h3= project.projectSource
-                            h3= project.clientName
-                            h3= project.startingDate
-                            h4= project.dueDate
+                            h4
+                                span.label= 'Project Source: '
+                                span= project.projectSource
+                            h4
+                                span.label= 'Client Name: '
+                                span= project.clientName
+                            - const startDate = project.startingDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
+                            h4
+                                span.label= 'Start Date: '
+                                span= startDate
+                            - const dueDate = project.dueDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
+                            h4
+                                span.label= 'Due Date: '
+                                span= dueDate
 
                         .technical_details
-                            p= project.developer
-                            p= project.projectManager
-                            p= project.platform
-                            p= project.theme
-                            p= project.plugins
-                            p= project.status
+                            p
+                                span.label= 'Developers: '
+                                span.data= project.developer
+                            p
+                                span.label= 'Project Manager'
+                                span.data= project.projectManager
+                            p
+                                span.label= 'Platform: '
+                                span.data= project.platform
+                            p
+                                span.label= 'Theme: '
+                                span.data= project.theme
+                            p
+                                span.label= 'Plugin: '
+                                span.data= project.plugins
+                            p
+                                span.label= 'Project Status: '
+                                span.data= project.status
