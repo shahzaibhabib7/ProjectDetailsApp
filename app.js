@@ -5,10 +5,11 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 // own modules
+const AppError = require('./utils/appError');
+const globalErrorHandler = require('./controllers/errorController');
 const projectRouter = require('./routes/projectRoutes');
 const userRouter = require('./routes/userRoutes');
 const viewRouter = require('./routes/viewRoutes');
-const { fail } = require('assert');
 
 
 const app = express();
@@ -46,11 +47,17 @@ app.use('/api/v1/projects', projectRouter);
 app.use('/api/v1/users', userRouter);
 
 // ROUTE HANDLER for handling unhandeled routes
-app.use('*', (req, res) => {
-    res.status(404).json({
-        status: 'fail',
-        message: `Can't find ${req.originalUrl} on this server!`
-    });
+// this app.all() will run for all the HTTP methods
+app.all('*', (req, res, next) => {
+    next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
+
+// when a user hits a URL that does not exist, we can consider it as an 
+// operational error
+// express already comes with MIDDLEWARE HANDLERS
+
+// give it four arguments and express will automatically recongnize it as 
+// global error handling middleware
+app.use(globalErrorHandler);
 
 module.exports = app;
