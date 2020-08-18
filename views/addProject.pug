@@ -16,10 +16,10 @@ html
                 form.form.add_new
                     .form_group
                         label.form_label Project Name
-                        input(type='text',name="projectName", placeholder='', required)
+                        input#projectName(type='text',name="projectName", placeholder='', required)
                     .form_group
                         label.form_label Project Source
-                        select(name="projectSource", required)
+                        select#projectSource(name="projectSource", required)
                             option(value="fiverr") Fiverr
                             option(value="upwork") Upwork
                             option(value="pinease") Pinease
@@ -27,7 +27,7 @@ html
                             option(value="personal") Personal
                     .form_group
                         label.form_label Client Name
-                        input(type='text',name="clientName", placeholder='', required)
+                        input#clientName(type='text',name="clientName", placeholder='', required)
                     .form_group
                         label.form_label Developer(s)
                         div
@@ -50,31 +50,32 @@ html
                             label(for="shahzaib habib ansari") Shahzaib Habib Ansari
                     .form_group
                         label.form_label Project Manager
-                        select(name="projectManager", required)
+                        select#projectManager(name="projectManager", required)
                             option(value="faheem abbas") Faheem Abbas
                             option(value="kazim raza") Kazim Raza
                     .form_group
                         label.form_label Start Date
-                        input(type='datetime-local', name="startDate" , required)
+                        input#startDate(type='datetime-local', name="startDate" , required)
                     .form_group
                         label.form_label Due Date
-                        input(type='datetime-local', name="dueDate" , required)
+                        input#dueDate(type='datetime-local', name="dueDate" , required)
                     .form_group
                         label.form_label Platform
-                        select(name="platform", required)
+                        select#platform(name="platform", required)
                             option(value="wordpress") Wordpress
                             option(value="shopify") Shopify
                             option(value="zendesk") Zendesk
                     .form_group
                         label.form_label Theme
-                        input(type='text', name="theme", placeholder='', required)
+                        input#theme(type='text', name="theme", placeholder='', required)
                     .form_group
                         label.form_label Plugin(s)
-                        input(type='text', name="plugins", placeholder='', required)
+                        input#plugins(type='text', name="plugins", placeholder='', required)
                     .form_group
                         label.form_label Status
-                        select(name="status", required)
+                        select#status(name="status", required)
                             option(value="started") Started
                             option(value="completed") Completed
                     .form_group
-                        input(type="submit", value="Add Project")
+                        input#submit-btn(type="submit", value="Add Project")
+        script(src='/js/index.js')
