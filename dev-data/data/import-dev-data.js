@@ -22,14 +22,14 @@ mongoose.connect(DB, {
 
 // read JSON file
 const projects = JSON.parse(fs.readFileSync(`${__dirname}/project-simple.json`, 'utf-8'));
-const users = JSON.parse(fs.readFileSync(`${__dirname}/user-simple.json`, 'utf-8'));
+// const users = JSON.parse(fs.readFileSync(`${__dirname}/user-simple.json`, 'utf-8'));
 
 
 // IMPORT DATA INTO DB
 const importData = async () => {
     try {
         await Project.create(projects);
-        await User.create(users);
+        // await User.create(users);
         console.log('Data successfully loaded!');
     } catch (err) {
         console.log(err);
@@ -41,7 +41,7 @@ const importData = async () => {
 const deleteData = async () => {
     try {
         await Project.deleteMany();
-        await User.deleteMany();
+        // await User.deleteMany();
         console.log('Data successfully deleted!');
     } catch (err) {
         console.log(err);

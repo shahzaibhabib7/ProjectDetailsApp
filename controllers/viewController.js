@@ -21,3 +21,9 @@ exports.getUsers = catchAsync(async (req, res, next) => {
         users
     });
 });
+
+exports.addNewProject = catchAsync(async (req, res, next) => {
+    res.status(200).render('addProject', {
+        title: 'Add New Project'
+    });
+});

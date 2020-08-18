@@ -56,3 +56,89 @@ body {
 .cards_container .card span.data {
     font-weight: 700;
 }
+
+/********************************************************************************/
+/*  ADD NEW PROJECT PAGE  */
+/********************************************************************************/
+
+.login-form {
+    background-color: #e9f3fb;
+}
+
+.login-form h1 {
+    text-align: center;
+    background-color: #2379be;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+form.form {
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e9f3fb;
+    padding: 30px;
+}
+
+form.form .form_group {
+    display: flex;
+    flex-direction: column;
+}
+
+form.form .form_group label.form_label {
+    color: #4d4d4d;
+    font-weight: 700;
+    margin-right: 20px;
+    padding: 10px 0px;
+}
+
+form.form .form_group div label {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #4d4d4d;
+    margin-left: 5px;
+}
+
+form.form .form_group input[type="text"], input[type="datetime-local"], select {
+    border: none;
+    border-bottom: 3px solid #ffffff;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 0.9em;
+    color: #4d4d4d;
+}
+
+form.form .form_group input[type="text"]:focus {
+    outline: none;
+    border-bottom: 3px solid #2379be;
+    border-radius: 0px;
+    transition: border 0.5s;
+}
+
+form.form .form_group input[type="datetime-local"]:focus, select:focus {
+    outline: none;
+}
+
+form.form .form_group input[type="submit"] {
+    margin-top: 20px;
+    max-width: 150px;
+    font-size: 1em;
+    font-weight: 800;
+    padding: 10px 15px;
+    background-color: #2379be;
+    transition: background-color 0.5s;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+form.form .form_group input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #1c5f97;
+    transition: background-color 0.5s;
+}
+
+form.form .form_group input[type="submit"]:focus {
+    outline: none;
+    background-color: #1c5f97;
+}

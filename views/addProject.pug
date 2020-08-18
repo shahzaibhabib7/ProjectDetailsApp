@@ -1,0 +1,80 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel="stylesheet" href="css/styles.css")
+        link(rel="shortcut icon" type='imgage/png'  href="img/favicon.png")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap")
+        title ProjectDetailsApp | #{title}
+        
+
+    body
+        main.main
+            .login-form
+                h1 Add New Project
+                form.form.add_new
+                    .form_group
+                        label.form_label Project Name
+                        input(type='text',name="projectName", placeholder='', required)
+                    .form_group
+                        label.form_label Project Source
+                        select(name="projectSource", required)
+                            option(value="fiverr") Fiverr
+                            option(value="upwork") Upwork
+                            option(value="pinease") Pinease
+                            option(value="sitex") Sitex
+                            option(value="personal") Personal
+                    .form_group
+                        label.form_label Client Name
+                        input(type='text',name="clientName", placeholder='', required)
+                    .form_group
+                        label.form_label Developer(s)
+                        div
+                            input(type="checkbox", name="developers", value="uzair haider")
+                            label(for="uzair haider") Uzair Haider
+                        div
+                            input(type="checkbox", name="developers", value="hasnain raza")
+                            label(for="hasnain raza") Hasnain Raza
+                        div
+                            input(type="checkbox", name="developers", value="muhammad karrar")
+                            label(for="muhammad karrar") Muhammad Karrar
+                        div
+                            input(type="checkbox", name="developers", value="ali hadi")
+                            label(for="ali hadi") Ali Hadi
+                        div                            
+                            input(type="checkbox", name="developers", value="majid ali")
+                            label(for="majid ali") Majid Ali
+                        div
+                            input(type="checkbox", name="developers", value="shahzai habib")
+                            label(for="shahzaib habib ansari") Shahzaib Habib Ansari
+                    .form_group
+                        label.form_label Project Manager
+                        select(name="projectManager", required)
+                            option(value="faheem abbas") Faheem Abbas
+                            option(value="kazim raza") Kazim Raza
+                    .form_group
+                        label.form_label Start Date
+                        input(type='datetime-local', name="startDate" , required)
+                    .form_group
+                        label.form_label Due Date
+                        input(type='datetime-local', name="dueDate" , required)
+                    .form_group
+                        label.form_label Platform
+                        select(name="platform", required)
+                            option(value="wordpress") Wordpress
+                            option(value="shopify") Shopify
+                            option(value="zendesk") Zendesk
+                    .form_group
+                        label.form_label Theme
+                        input(type='text', name="theme", placeholder='', required)
+                    .form_group
+                        label.form_label Plugin(s)
+                        input(type='text', name="plugins", placeholder='', required)
+                    .form_group
+                        label.form_label Status
+                        select(name="status", required)
+                            option(value="started") Started
+                            option(value="completed") Completed
+                    .form_group
+                        input(type="submit", value="Add Project")

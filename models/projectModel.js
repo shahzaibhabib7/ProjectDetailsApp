@@ -15,7 +15,7 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: [true, 'A project must have a client name']
     },
-    developer: {
+    developers: {
         type: [String],
         required: [true, 'A project must have a developer']
     },
@@ -23,7 +23,7 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: [true, 'A project must have a manager']
     },
-    startingDate: {
+    startDate: {
         type: Date,
         required: [true, 'A project must have a starting date']
     },

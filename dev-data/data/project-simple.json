@@ -1,17 +1,17 @@
 [
     {
         "projectName": "Anima Garden",
-        "projectSource": "fiverr",
+        "projectSource": "Fiverr",
         "clientName": "Andre Heller",
-        "developer": [
+        "developers": [
             "Shahzaib Habib Ansari",
             "Hasnain Raza"
         ],
         "projectManager": "Muhammad Kazim",
-        "startingDate": "2020-03-19T09:00:00.000Z",
+        "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
-        "theme": "sunway",
+        "theme": "Sunway",
         "plugins": [
             "Classic Editor",
             "Woocommerce"
@@ -22,11 +22,11 @@
         "projectName": "RBLUXCars Ltd.",
         "projectSource": "Upwork",
         "clientName": "John Smith",
-        "developer": [
+        "developers": [
             "Shahzaib Habib Ansari"
         ],
         "projectManager": "Kazim Raza",
-        "startingDate": "2020-03-19T09:00:00.000Z",
+        "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Be Theme",
@@ -39,13 +39,13 @@
         "projectName": "Fastrefill4you",
         "projectSource": "Fiverr",
         "clientName": "Alan Border",
-        "developer": [
+        "developers": [
             "Shahzaib Habib Ansari",
             "Majid Ali",
             "Ali Hadi"
         ],
         "projectManager": "Faheem Abbas",
-        "startingDate": "2020-03-19T09:00:00.000Z",
+        "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Divi Theme",
@@ -60,11 +60,11 @@
         "projectName": "Commercial Cleaning Business Box",
         "projectSource": "Fiverr",
         "clientName": "Amanda Davis",
-        "developer": [
+        "developers": [
             "Shahzaib Habib Ansari"
         ],
         "projectManager": "Faheem Abbas",
-        "startingDate": "2020-03-19T09:00:00.000Z",
+        "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Divi Theme",
@@ -77,13 +77,13 @@
         "projectName": "Abbas Automation",
         "projectSource": "3rd Party",
         "clientName": "Abbas Khan",
-        "developer": [
+        "developers": [
             "Shahzaib Habib Ansari",
             "Majid Ali",
             "Hasnain Raza"
         ],
         "projectManager": "Faheem Abbas",
-        "startingDate": "2020-03-19T09:00:00.000Z",
+        "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
         "theme": "Divi Theme",
@@ -95,18 +95,18 @@
     },
     {
         "projectName": "Zookdisk",
-        "projectSource": "fiverr",
+        "projectSource": "Fiverr",
         "clientName": "Paul",
-        "developer": [
+        "developers": [
             "Uzair Haider",
             "Hasnain Raza",
             "Majid Ali"
         ],
         "projectManager": "Muhammad Kazim",
-        "startingDate": "2020-03-19T09:00:00.000Z",
+        "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
-        "theme": "example",
+        "theme": "Example",
         "plugins": [
             "Classic Editor",
             "Woocommerce",

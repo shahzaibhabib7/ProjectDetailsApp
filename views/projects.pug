@@ -22,7 +22,7 @@ html
                             h4
                                 span.label= 'Client Name: '
                                 span= project.clientName
-                            - const startDate = project.startingDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
+                            - const startDate = project.startDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
                             h4
                                 span.label= 'Start Date: '
                                 span= startDate
@@ -34,7 +34,7 @@ html
                         .technical_details
                             p
                                 span.label= 'Developers: '
-                                span.data= project.developer
+                                span.data= project.developers
                             p
                                 span.label= 'Project Manager'
                                 span.data= project.projectManager
