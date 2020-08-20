@@ -1,5 +1,5 @@
 {
-    "name": "projectdetailsappapi",
+    "name": "projectdetailsapp",
     "version": "1.0.0",
     "description": "Stores project details and provides easy to view and search functionality",
     "main": "index.js",
