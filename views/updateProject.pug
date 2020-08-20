@@ -1,0 +1,77 @@
+extends base
+block content
+    main.main
+        .login-form
+            h1= `Edit "${project.projectName}" Project`
+            form.form.update
+                .form_group
+                    label.form_label Project Name
+                    input#projectName(type='text',name="projectName", placeholder='', value=`${project.projectName}`, autofocus=true, required)
+                .form_group
+                    label.form_label Project Source
+                    select#projectSource(name="projectSource", value=`${project.projectSource}`, required)
+                        option(value="Fiverr", selected= project.projectSource == 'Fiverr') Fiverr
+                        option(value="Upwork", selected= project.projectSource == 'Upwork') Upwork
+                        option(value="Pinease", selected= project.projectSource == 'Pinease') Pinease
+                        option(value="Sitex", selected= project.projectSource == 'Sitex') Sitex
+                        option(value="Personal", selected= project.projectSource == 'Personal') Personal
+                .form_group
+                    label.form_label Client Name
+                    input#clientName(type='text',name="clientName", placeholder='', value=`${project.clientName}`, required)
+                .form_group
+                    label.form_label Developer(s)
+                    div
+                        input.developers(type="checkbox", name="developers", checked= project.developers.includes('Uzair Haider'), value="Uzair Haider")
+                        label(for="Uzair Haider") Uzair Haider
+                    div
+                        input.developers(type="checkbox", name="developers", checked= project.developers.includes('Hasnain Raza'), value="Hasnain Raza")
+                        label(for="Hasnain Raza") Hasnain Raza
+                    div
+                        input.developers(type="checkbox", name="developers", checked= project.developers.includes('Muhammad Karrar'), value="Muhammad Karrar")
+                        label(for="Muhammad Karrar") Muhammad Karrar
+                    div
+                        input.developers(type="checkbox", name="developers", checked= project.developers.includes('Ali Hadi'), value="Ali Hadi")
+                        label(for="Ali Hadi") Ali Hadi
+                    div                            
+                        input.developers(type="checkbox", name="developers", checked= project.developers.includes('Majid Ali'), value="Majid Ali")
+                        label(for="Majid Ali") Majid Ali
+                    div
+                        input.developers(type="checkbox", name="developers", checked= project.developers.includes('Shahzaib Habib Ansari'), value="Shahzaib Habib Ansari")
+                        label(for="Shahzaib Habib Ansari") Shahzaib Habib Ansari
+                .form_group
+                    label.form_label Project Manager
+                    select#projectManager(name="projectManager", required)
+                        option(value="Faheem Abbas", selected= project.projectManager == 'Faheem Abbas') Faheem Abbas
+                        option(value="Kazim Raza", selected= project.projectManager == 'Kazim Raza') Kazim Raza
+                .form_group
+                    label.form_label Start Date
+                    // p= project.startDate
+                    - const startDateTime = new Date(project.startDate);
+                    - const newStartDateTime = `${startDateTime.getFullYear()}-${(startDateTime.getMonth() + 1).toString().padStart(2, '0')}-${startDateTime.getDate().toString().padStart(2, '0')}T${startDateTime.getHours().toString().padStart(2, '0')}:${startDateTime.getMinutes().toString().padStart(2, '0')}`
+                    input#startDate(type='datetime-local', name="startDate", value= newStartDateTime, required)
+                .form_group
+                    label.form_label Due Date
+                    // p= project.dueDate
+                    - const dueDateTime = new Date(project.dueDate);
+                    - const newDueDateTime = `${dueDateTime.getFullYear()}-${(dueDateTime.getMonth() + 1).toString().padStart(2, '0')}-${dueDateTime.getDate().toString().padStart(2, '0')}T${dueDateTime.getHours().toString().padStart(2, '0')}:${dueDateTime.getMinutes().toString().padStart(2, '0')}`
+                    input#dueDate(type='datetime-local', name="dueDate", value=newDueDateTime, required)
+                .form_group
+                    label.form_label Platform
+                    select#platform(name="platform", required)
+                        option(value="Wordpress", selected= project.platform == 'Wordpress') Wordpress
+                        option(value="Shopify", selected= project.platform == 'Shopify') Shopify
+                        option(value="Zendesk", selected= project.platform == 'Zendesk') Zendesk
+                .form_group
+                    label.form_label Theme
+                    input#theme(type='text', name="theme", placeholder='', value=`${project.theme}`, required)
+                .form_group
+                    label.form_label Plugin(s)
+                    p= project.plugins
+                    input#plugins(type='text', name="plugins", placeholder='', value=`${project.plugins}`, required)
+                .form_group
+                    label.form_label Status
+                    select#status(name="status", value=`${project.status}`, required)
+                        option(value="Started", selected= project.status == 'Started') Started
+                        option(value="Completed", selected= project.status == 'Completed') Completed
+                .form_group
+                    input#submit-btn(type="submit", value="Done")

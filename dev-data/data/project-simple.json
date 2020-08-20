@@ -7,7 +7,7 @@
             "Shahzaib Habib Ansari",
             "Hasnain Raza"
         ],
-        "projectManager": "Muhammad Kazim",
+        "projectManager": "Kazim Raza",
         "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
@@ -16,7 +16,7 @@
             "Classic Editor",
             "Woocommerce"
         ],
-        "status": "Complete"
+        "status": "Completed"
     },
     {
         "projectName": "RBLUXCars Ltd.",
@@ -33,7 +33,7 @@
         "plugins": [
             "Classic Editor"
         ],
-        "status": "Complete"
+        "status": "Completed"
     },
     {
         "projectName": "Fastrefill4you",
@@ -54,7 +54,7 @@
             "Woocommerce",
             "Mail Chimp"
         ],
-        "status": "Complete"
+        "status": "Completed"
     },
     {
         "projectName": "Commercial Cleaning Business Box",
@@ -71,11 +71,11 @@
         "plugins": [
             "Classic Editor"
         ],
-        "status": "Complete"
+        "status": "Completed"
     },
     {
         "projectName": "Abbas Automation",
-        "projectSource": "3rd Party",
+        "projectSource": "Pinease",
         "clientName": "Abbas Khan",
         "developers": [
             "Shahzaib Habib Ansari",
@@ -91,7 +91,7 @@
             "Classic Editor",
             "Woocommerce"
         ],
-        "status": "Complete"
+        "status": "Completed"
     },
     {
         "projectName": "Zookdisk",
@@ -102,7 +102,7 @@
             "Hasnain Raza",
             "Majid Ali"
         ],
-        "projectManager": "Muhammad Kazim",
+        "projectManager": "Kazim Raza",
         "startDate": "2020-03-19T09:00:00.000Z",
         "dueDate": "2020-03-25T09:00:00.000Z",
         "platform": "Wordpress",
@@ -112,6 +112,6 @@
             "Woocommerce",
             "Paypal"
         ],
-        "status": "Complete"
+        "status": "Completed"
     }
 ]

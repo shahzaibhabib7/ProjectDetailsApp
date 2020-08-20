@@ -1,10 +1,22 @@
 doctype html
 html
     head
-        title ProjectDetailsApp | #{project}
-        link(rel="stylesheet" href="css/styles.css")
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel="stylesheet" href="/css/styles.css")
         link(rel="shortcut icon" type='imgage/png'  href="img/favicon.png")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap")
+        title ProjectDetailsApp | #{title}
 
     body
-        h1= project
-        h3= user
+        // HEADER
+        include _header
+
+        // CONTENT
+        block content
+
+        // FOOTER
+        include _footer
+        
+        // JS ASSESTS
+        script(src='/js/bundle.js')

@@ -9,6 +9,11 @@ body {
     background-color: #ffffff;
 }
 
+.header .nav-bar a.header_items {
+    text-decoration: none;
+    color: #2379be;
+}
+
 .main {
     width: 95%;
     margin: 0px auto;
@@ -27,7 +32,7 @@ body {
     margin: 0px 0px 10px;
 }
 
-.cards_container .card .details, .technical_details {
+.cards_container .card .details, .technical_details, .project_controls {
     padding: 0px 20px 2px;
 }
 
@@ -55,6 +60,18 @@ body {
 
 .cards_container .card span.data {
     font-weight: 700;
+}
+
+.cards_container .card a.control_btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2379be;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 0.8em;
+    font-weight: 100;
+    border-radius: 2px;
 }
 
 /********************************************************************************/

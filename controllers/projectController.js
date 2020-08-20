@@ -67,7 +67,7 @@ exports.deleteProject = catchAsync(async (req, res, next) => {
 
     await Project.findByIdAndDelete(req.params.id);
 
-    res.status(404).json({
+    res.status(204).json({
         status: 'success',
         data: null
     });

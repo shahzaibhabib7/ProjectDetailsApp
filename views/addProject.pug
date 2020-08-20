@@ -1,81 +1,70 @@
-doctype html
-html
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        link(rel="stylesheet" href="css/styles.css")
-        link(rel="shortcut icon" type='imgage/png'  href="img/favicon.png")
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap")
-        title ProjectDetailsApp | #{title}
-        
-
-    body
-        main.main
-            .login-form
-                h1 Add New Project
-                form.form.add_new
-                    .form_group
-                        label.form_label Project Name
-                        input#projectName(type='text',name="projectName", placeholder='', required)
-                    .form_group
-                        label.form_label Project Source
-                        select#projectSource(name="projectSource", required)
-                            option(value="fiverr") Fiverr
-                            option(value="upwork") Upwork
-                            option(value="pinease") Pinease
-                            option(value="sitex") Sitex
-                            option(value="personal") Personal
-                    .form_group
-                        label.form_label Client Name
-                        input#clientName(type='text',name="clientName", placeholder='', required)
-                    .form_group
-                        label.form_label Developer(s)
-                        div
-                            input(type="checkbox", name="developers", value="uzair haider")
-                            label(for="uzair haider") Uzair Haider
-                        div
-                            input(type="checkbox", name="developers", value="hasnain raza")
-                            label(for="hasnain raza") Hasnain Raza
-                        div
-                            input(type="checkbox", name="developers", value="muhammad karrar")
-                            label(for="muhammad karrar") Muhammad Karrar
-                        div
-                            input(type="checkbox", name="developers", value="ali hadi")
-                            label(for="ali hadi") Ali Hadi
-                        div                            
-                            input(type="checkbox", name="developers", value="majid ali")
-                            label(for="majid ali") Majid Ali
-                        div
-                            input(type="checkbox", name="developers", value="shahzai habib")
-                            label(for="shahzaib habib ansari") Shahzaib Habib Ansari
-                    .form_group
-                        label.form_label Project Manager
-                        select#projectManager(name="projectManager", required)
-                            option(value="faheem abbas") Faheem Abbas
-                            option(value="kazim raza") Kazim Raza
-                    .form_group
-                        label.form_label Start Date
-                        input#startDate(type='datetime-local', name="startDate" , required)
-                    .form_group
-                        label.form_label Due Date
-                        input#dueDate(type='datetime-local', name="dueDate" , required)
-                    .form_group
-                        label.form_label Platform
-                        select#platform(name="platform", required)
-                            option(value="wordpress") Wordpress
-                            option(value="shopify") Shopify
-                            option(value="zendesk") Zendesk
-                    .form_group
-                        label.form_label Theme
-                        input#theme(type='text', name="theme", placeholder='', required)
-                    .form_group
-                        label.form_label Plugin(s)
-                        input#plugins(type='text', name="plugins", placeholder='', required)
-                    .form_group
-                        label.form_label Status
-                        select#status(name="status", required)
-                            option(value="started") Started
-                            option(value="completed") Completed
-                    .form_group
-                        input#submit-btn(type="submit", value="Add Project")
-        script(src='/js/index.js')
+extends base
+block content
+    main.main
+        .login-form
+            h1 Add New Project
+            form.form.add_new
+                .form_group
+                    label.form_label Project Name
+                    input#projectName(type='text',name="projectName", placeholder='', autofocus= true, required)
+                .form_group
+                    label.form_label Project Source
+                    select#projectSource(name="projectSource", required)
+                        option(value="Fiverr") Fiverr
+                        option(value="Upwork") Upwork
+                        option(value="Pinease") Pinease
+                        option(value="Sitex") Sitex
+                        option(value="Personal") Personal
+                .form_group
+                    label.form_label Client Name
+                    input#clientName(type='text',name="clientName", placeholder='', required)
+                .form_group
+                    label.form_label Developer(s)
+                    div
+                        input#developers(type="checkbox", name="developers", value="Uzair Haider")
+                        label(for="Uzair Haider") Uzair Haider
+                    div
+                        input(type="checkbox", name="developers", value="Hasnain Raza")
+                        label(for="Hasnain Raza") Hasnain Raza
+                    div
+                        input(type="checkbox", name="developers", value="Muhammad Karrar")
+                        label(for="Muhammad Karrar") Muhammad Karrar
+                    div
+                        input(type="checkbox", name="developers", value="Ali Hadi")
+                        label(for="Ali Hadi") Ali Hadi
+                    div                            
+                        input(type="checkbox", name="developers", value="Majid Ali")
+                        label(for="Majid Ali") Majid Ali
+                    div
+                        input(type="checkbox", name="developers", value="Shahzaib Habib Ansari")
+                        label(for="Shahzaib Habib Ansari") Shahzaib Habib Ansari
+                .form_group
+                    label.form_label Project Manager
+                    select#projectManager(name="projectManager", required)
+                        option(value="Faheem Abbas") Faheem Abbas
+                        option(value="Kazim Raza") Kazim Raza
+                .form_group
+                    label.form_label Start Date
+                    input#startDate(type='datetime-local', name="startDate" , required)
+                .form_group
+                    label.form_label Due Date
+                    input#dueDate(type='datetime-local', name="dueDate" , required)
+                .form_group
+                    label.form_label Platform
+                    select#platform(name="platform", required)
+                        option(value="Wordpress") Wordpress
+                        option(value="Shopify") Shopify
+                        option(value="Zendesk") Zendesk
+                .form_group
+                    label.form_label Theme
+                    input#theme(type='text', name="theme", placeholder='', required)
+                .form_group
+                    label.form_label Plugin(s)
+                    input#plugins(type='text', name="plugins", placeholder='', required)
+                .form_group
+                    label.form_label Status
+                    select#status(name="status", required)
+                        option(value="Started") Started
+                        option(value="Completed") Completed
+                .form_group
+                    input#submit-btn(type="submit", value="Add Project")

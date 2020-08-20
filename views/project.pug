@@ -1,0 +1,45 @@
+extends base
+block content
+    main.main
+        .cards_container
+            .card
+                .details
+                    h1= project.projectName
+                    h4
+                        span.label= 'Project Source: '
+                        span= project.projectSource
+                    h4
+                        span.label= 'Client Name: '
+                        span= project.clientName
+                    - const startDate = project.startDate.toLocaleString('en-us', { dateStyle: 'medium', timeStyle: 'short'})
+                    h4
+                        span.label= 'Start Date: '
+                        span= startDate
+                    - const dueDate = project.dueDate.toLocaleString('en-us', { dateStyle: 'medium', timeStyle: 'short'})
+                    h4
+                        span.label= 'Due Date: '
+                        span= dueDate
+
+                .technical_details
+                    p
+                        span.label= 'Developers: '
+                        span.data= project.developers
+                    p
+                        span.label= 'Project Manager: '
+                        span.data= project.projectManager
+                    p
+                        span.label= 'Platform: '
+                        span.data= project.platform
+                    p
+                        span.label= 'Theme: '
+                        span.data= project.theme
+                    p
+                        span.label= 'Plugin: '
+                        span.data= project.plugins
+                    p
+                        span.label= 'Project Status: '
+                        span.data= project.status
+                
+                .project_controls
+                    a.control_btn.edit-btn(href=`/update-project/${project._id}`) EDIT
+                    a.control_btn.delete-btn(href="/projects") DELETE

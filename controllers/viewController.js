@@ -13,6 +13,25 @@ exports.getProjects = catchAsync(async (req, res, next) => {
     });
 });
 
+exports.getProject = catchAsync(async (req, res, next) => {
+    const project = await Project.findById(req.params.id);
+
+    res.status(200).render('project', {
+        title: project.projectName,
+        project
+    });
+});
+
+exports.updateProject = catchAsync(async (req, res, next) => {
+    const project = await Project.findById(req.params.id);
+    // console.log('\n', project.startDate);
+    // console.log(project.dueDate, '\n');
+    res.status(200).render('updateProject', {
+        title: project.projectName,
+        project
+    });
+});
+
 exports.getUsers = catchAsync(async (req, res, next) => {
     const users = await User.find();
 
